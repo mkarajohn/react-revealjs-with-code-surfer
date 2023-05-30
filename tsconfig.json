@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "outDir": "dist",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "declaration": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path resolutions */
+    "paths": {
+      "code-surfer-types": ["./src/code-surfer-types"]
+    }
+  },
+  "include": ["src"],
+  "references": []
+}

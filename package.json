@@ -1,0 +1,58 @@
+{
+  "name": "react-revealjs-with-code-surfer",
+  "version": "1.0.0",
+  "description": "A collection of React components that make it easy to create presentation slides using code-surfer with reveal.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/mkarajohn/react-revealjs-with-code-surfer"
+  },
+  "scripts": {
+    "build": "npm run build:esm & npm run build:cjs",
+    "build:esm": "rimraf ./dist/esm && tsc --module esnext --outDir dist/esm",
+    "build:cjs": "rimraf ./dist/cjs && tsc --module commonjs --outDir dist/cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "code-surfer",
+    "reveal.js",
+    "presentation",
+    "slides",
+    "fancy"
+  ],
+  "author": {
+    "name": "Dimitris Karagiannis",
+    "url": "https://stackoverflow.com/users/4651083/dimitris-karagiannis"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@code-surfer/standalone": "^3.1.1",
+    "@code-surfer/themes": "^3.1.1",
+    "use-spring": "^0.2.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.14.42 || ^17 || ^18",
+    "@types/react-dom": "^16.9.19 || ^17 || ^18",
+    "@types/reveal.js": "^4.4.2",
+    "react": "^16.8.0 || ^17  || ^18",
+    "react-dom": "^16.8.0 || ^17  || ^18",
+    "reveal.js": "^4.5.0"
+  }
+}
