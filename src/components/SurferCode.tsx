@@ -17,7 +17,7 @@ import { useCodeSurferSlideID } from '../hooks/useCodeSurferSlideID';
 import { useRevealJSInstance } from '../hooks/useRevealJSInstance';
 import type { InputStep } from './types';
 
-export type Themes =
+export type SurferCodeThemes =
   | 'base'
   | 'dracula'
   | 'duotoneDark'
@@ -57,7 +57,7 @@ function selectTheme(x: string) {
 
 export type SurferCodeProps = {
   steps: InputStep[];
-  theme?: Themes;
+  theme?: SurferCodeThemes;
   nav?: {
     next: KeyboardEvent['code'];
     previous: KeyboardEvent['code'];
