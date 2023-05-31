@@ -88,7 +88,7 @@ Code Surfer code panels in distant slides have sizing issues
 
 A hook that if it's used inside the descendants of a `SurferSlideIDProvider` it returns the unique 
 id that is needed to exist as a `data-code-surfer` attribute on the slide `section` in order to 
-isolate code navigation to the currently visible Code Surfer code panel. Returns `'''` if it's 
+isolate code navigation to the currently visible Code Surfer code panel. Returns `''` if it's 
 used outside of a context provider.
 
 ### `useRevealJSInstance`
