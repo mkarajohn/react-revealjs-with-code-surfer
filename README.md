@@ -4,6 +4,18 @@ This is an assortment of utility React components that allow you to easily use
 [`Code Surfer`](https://github.com/pomber/code-surfer) in [`reveal.js`](https://revealjs.com/)
 presentations, without the need to use [`mdx-deck`](https://github.com/jxnblk/mdx-deck)
 
+## Installation
+
+```bash
+npm install react-revealjs-with-code-surfer
+```
+
+or
+
+```bash
+yarn add react-revealjs-with-code-surfer
+```
+
 ## Why?
 
 I created this after I struggled using the amazing `code-surfer` package along with the equally amazing `reveal.js` 
