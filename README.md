@@ -14,6 +14,8 @@ But if there is a will there is a way.
 
 ![showcase](./assets/showcase.gif)
 
+_No mdx-deck!_
+
 ## API
 
 ### `SurferCode`
