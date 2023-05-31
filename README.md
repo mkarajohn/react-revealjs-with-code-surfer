@@ -12,7 +12,7 @@ it difficult to use with any other presentation library.
 
 But if there is a will there is a way.
 
-(![showcase](https://github.com/mkarajohn/react-revealjs-with-code-surfer/blob/master/assets/Screencast%20from%2031-05-2023%2004%3A22%3A50%20%CE%A0%CE%9C.webm))
+![showcase](./assets/showcase.gif)
 
 ## API
 
