@@ -73,6 +73,7 @@ A simple provider that creates a unique ID and passes it down to children. Neces
 you have many Code Surfer code panels, otherwise navigating in one will navigate every single one
 (if you are using the same navigation keys in every single one)
 
+* `children: ReactNode`
 * `id?: string` : You may pass a predefined id if you know that it will be unique
 
 ### `RevealJSProvider`
