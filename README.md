@@ -94,3 +94,8 @@ used outside of a context provider.
 A hook that if it's used inside the descendants of a `RevealJSInstanceProvider` it returns the unique 
 currently initialized `reveal.js` instance. Returns `null` if it's 
 used outside of a context provider or if the `reveal.js` instance has not completed initializing yet.
+
+## Notes
+
+You will need to have `reveal.js`, `react`, `react-dom` and their types installed in your own project.
+This package only requires them as peer dependencies.
