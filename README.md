@@ -1,6 +1,6 @@
 # React Reveal.js with Code Surfer
 
-This is an assortment of utility React components that allow you to easily use
+This is an assortment of unstyled utility React components that allow you to easily use
 [`Code Surfer`](https://github.com/pomber/code-surfer) in [`reveal.js`](https://revealjs.com/)
 presentations, without the need to use [`mdx-deck`](https://github.com/jxnblk/mdx-deck)
 
