@@ -12,6 +12,8 @@ it difficult to use with any other presentation library.
 
 But if there is a will there is a way.
 
+![showcase](assets/Screencast from 31-05-2023 04:22:50 ΠΜ.webm)
+
 ## API
 
 ### `SurferCode`
