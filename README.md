@@ -6,13 +6,13 @@ presentations, without the need to use [`mdx-deck`](https://github.com/jxnblk/md
 
 ## Why?
 
-I created this after I struggled using the amazing `code-surfer` package with a `reveal.js`
-presentation I was making. `code-surfer` is tightly coupled with `mdx-deck` by default, which makes
+I created this after I struggled using the amazing `code-surfer` package along with the equally amazing `reveal.js` 
+for a presentation I was making. `code-surfer` is tightly coupled with `mdx-deck` by default, which makes
 it difficult to use with any other presentation library.
 
 But if there is a will there is a way.
 
-([showcase](https://github.com/mkarajohn/react-revealjs-with-code-surfer/blob/master/assets/Screencast%20from%2031-05-2023%2004%3A22%3A50%20%CE%A0%CE%9C.webm))
+(![showcase](https://github.com/mkarajohn/react-revealjs-with-code-surfer/blob/master/assets/Screencast%20from%2031-05-2023%2004%3A22%3A50%20%CE%A0%CE%9C.webm))
 
 ## API
 
