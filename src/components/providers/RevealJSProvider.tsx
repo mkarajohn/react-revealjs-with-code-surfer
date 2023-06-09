@@ -6,12 +6,16 @@ import { revealJSContext } from '../../contexts/revealjs-context';
 
 export type RevealJSProviderProps = {
   children: ReactNode;
+  exposeToWindow?: boolean;
+  onInitialize?: (x: RevealJS.Api) => void;
   config?: Omit<RevealJS.Options, 'viewDistance'>;
 };
 
 export function RevealJSProvider(props: RevealJSProviderProps) {
   const {
     children,
+    exposeToWindow = false,
+    onInitialize,
     config = {
       plugins: [RevealNotes],
       hash: true,
@@ -30,10 +34,21 @@ export function RevealJSProvider(props: RevealJSProviderProps) {
         viewDistance: Infinity,
       });
 
-      instance.initialize().then(() => {
-        status.current = 'initialized';
-        setRevealInstance(instance);
-      });
+      if (exposeToWindow) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        window.Reveal = instance;
+      }
+
+      instance
+        .initialize()
+        .then(() => {
+          status.current = 'initialized';
+          setRevealInstance(instance);
+        })
+        .then(() => {
+          onInitialize?.(instance);
+        });
 
       status.current = 'initializing';
     }
@@ -46,11 +61,14 @@ export function RevealJSProvider(props: RevealJSProviderProps) {
     return function () {
       if (revealInstance) {
         revealInstance.destroy();
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        delete window.Reveal;
         setRevealInstance(null);
         status.current = 'uninitialized';
       }
     };
-  }, [revealInstance]);
+  }, [config, exposeToWindow, revealInstance]);
 
   return <revealJSContext.Provider value={revealInstance}>{children}</revealJSContext.Provider>;
 }

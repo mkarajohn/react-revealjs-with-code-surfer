@@ -114,6 +114,8 @@ Code Surfer code panels in distant slides have sizing issues
 
 * `children: ReactNode`
 * `config?: Omit<RevealJS.Options, 'viewDistance'>` : Default config is `{ plugins: [RevealNotes], hash: true, }`
+* `exposeToWindow?: boolean` : Chose to expose the reveal.js instance to the `window` object. Default is `false`.
+* `onInitialize?: (revealInstance: Reveal.Api) => void` : Callback function you can pass that will be executed after reveal.js has initialized and *after* the reveal.js instance has been set as the current reveal.js instance internally in the provider state.
 
 ---
 
