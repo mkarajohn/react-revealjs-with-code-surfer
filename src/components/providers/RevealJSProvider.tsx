@@ -68,7 +68,7 @@ export function RevealJSProvider(props: RevealJSProviderProps) {
         status.current = 'uninitialized';
       }
     };
-  }, [config, exposeToWindow, revealInstance]);
+  }, [config, exposeToWindow, onInitialize, revealInstance]);
 
   return <revealJSContext.Provider value={revealInstance}>{children}</revealJSContext.Provider>;
 }
