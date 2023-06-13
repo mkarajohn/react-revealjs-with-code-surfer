@@ -13,7 +13,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npm run build:esm & npm run build:cjs",
+    "build": "rimraf ./dist/types && npm run build:esm & npm run build:cjs",
     "build:esm": "rimraf ./dist/esm && tsc --module esnext --outDir dist/esm",
     "build:cjs": "rimraf ./dist/cjs && tsc --module commonjs --outDir dist/cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
