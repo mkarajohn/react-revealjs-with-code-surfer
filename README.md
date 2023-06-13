@@ -1,5 +1,7 @@
 # React Reveal.js with Code Surfer
 
+[![npm version](https://badge.fury.io/js/react-revealjs-with-code-surfer.svg)](https://badge.fury.io/js/react-revealjs-with-code-surfer)
+
 This is an assortment of unstyled utility React components that allow you to easily use
 [`Code Surfer`](https://github.com/pomber/code-surfer) in [`reveal.js`](https://revealjs.com/)
 presentations, without the need to use [`mdx-deck`](https://github.com/jxnblk/mdx-deck)
