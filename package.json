@@ -13,9 +13,10 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "rimraf ./dist/types && npm run build:esm & npm run build:cjs",
+    "build": "npm run build:esm & npm run build:cjs & npm run build:types",
     "build:esm": "rimraf ./dist/esm && tsc --module esnext --outDir dist/esm",
     "build:cjs": "rimraf ./dist/cjs && tsc --module commonjs --outDir dist/cjs",
+    "build:types": "rimraf ./dist/types && tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir dist/types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
