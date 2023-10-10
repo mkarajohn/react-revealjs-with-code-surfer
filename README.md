@@ -75,7 +75,7 @@ A utility component that provides a `section` slide with a slide ID. Must be use
 
 **Props**
 
-- `children: ReactNode` : `children`
+- `children: ReactNode`
 - `...rest: HTMLProps<HTMLElement>` : whatever HTML attribute you want to pass to the underlying `section` element. `data-code-surfer` values will be ignored
 
 ```jsx
