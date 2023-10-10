@@ -20,7 +20,7 @@ yarn add react-revealjs-with-code-surfer
 
 ## Why?
 
-I created this after I struggled using the amazing `code-surfer` package along with the equally amazing `reveal.js` 
+I created this after I struggled using the amazing `code-surfer` package along with the equally amazing `reveal.js`
 for a presentation I was making. `code-surfer` is tightly coupled with `mdx-deck` by default, which makes
 it difficult to use with any other presentation library.
 
@@ -36,9 +36,9 @@ _No mdx-deck!_
 
 #### `SurferCode`
 
-Provides you with a Code Surfer code panel, with keyboard controls and animations enabled. 
-Must be used inside a `RevealJSInstanceProvider`. Should be used inside a `SurferSlideIDProvider` 
-if you have many Code Surfer code panels, but can be used without one if you only have one.
+Provides you with a Code Surfer code panel, with keyboard controls and animations enabled.
+Must be used inside a `RevealJSInstanceProvider`. Should be used inside a `SurferSlideIDProvider`
+if you have many `SurferCode` code panels, but can be used without one if you only have one.
 
 **Props**
 
@@ -75,14 +75,14 @@ A utility component that provides a `section` slide with a slide ID. Must be use
 
 **Props**
 
-- `children: ReactNode` : `children` should be used for reveal.js notes. Passing visual elements may look weird.
-- `...rest: HTMLProps<HTMLElement>` : whatever HTML attribute you want to pass it. `data-code-surfer` values will be ignored
+- `children: ReactNode` : `children`
+- `...rest: HTMLProps<HTMLElement>` : whatever HTML attribute you want to pass to the underlying `section` element. `data-code-surfer` values will be ignored
 
 ```jsx
 // example
 
 <SurferSlideIDProvider>
-  <SurferSlide className="sdasda">
+  <SurferSlide className="will-be-passed-to-the-section-element">
     <div className="r-stretch text-left">
       <SurferCode steps={props.steps} />
     </div>
@@ -95,29 +95,29 @@ A utility component that provides a `section` slide with a slide ID. Must be use
 
 #### `SurferSlideIDProvider`
 
-A simple provider that creates a unique ID and passes it down to children. Necessary to use if 
+A simple provider that creates a unique ID and passes it down to children. Necessary to use if
 you have many Code Surfer code panels, otherwise navigating in one will navigate every single one
 (if you are using the same navigation keys in every single one)
 
 **Props**
 
-* `children: ReactNode`
-* `id?: string` : You may pass a predefined id if you know that it will be unique
+- `children: ReactNode`
+- `id?: string` : You may pass a predefined id if you know that it will be unique
 
 ---
 
 #### `RevealJSProvider`
 
-A provider that initializes a `reveal.js` instance and passes it down. Accepts a `reveal.js` options 
-object, however `viewdistance` will be ignored since it must always be `Infinity` otherwise 
+A provider that initializes a `reveal.js` instance and passes it down. Accepts a `reveal.js` options
+object, however `viewdistance` will be ignored since it must always be `Infinity` otherwise
 Code Surfer code panels in distant slides have sizing issues
 
 **Props**
 
-* `children: ReactNode`
-* `config?: Omit<RevealJS.Options, 'viewDistance'>` : Default config is `{ plugins: [RevealNotes], hash: true, }`
-* `exposeToWindow?: boolean` : Chose to expose the reveal.js instance to the `window` object. Default is `false`.
-* `onInitialize?: (revealInstance: Reveal.Api) => void` : Callback function you can pass that will be executed after reveal.js has initialized and *after* the reveal.js instance has been set as the current reveal.js instance internally in the provider state.
+- `children: ReactNode`
+- `config?: Omit<RevealJS.Options, 'viewDistance'>` : Default config is `{ plugins: [RevealNotes], hash: true, }`
+- `exposeToWindow?: boolean` : Chose to expose the reveal.js instance to the `window` object. Default is `false`.
+- `onInitialize?: (revealInstance: Reveal.Api) => void` : Callback function you can pass that will be executed after reveal.js has initialized and _after_ the reveal.js instance has been set as the current reveal.js instance internally in the provider state.
 
 ---
 
@@ -125,15 +125,15 @@ Code Surfer code panels in distant slides have sizing issues
 
 #### `useCodeSurferSlideID`
 
-A hook that if it's used inside the descendants of a `SurferSlideIDProvider` it returns the unique 
-id that is needed to exist as a `data-code-surfer` attribute on the slide `section` in order to 
-isolate code navigation to the currently visible Code Surfer code panel. Returns `''` if it's 
+A hook that if it's used inside the descendants of a `SurferSlideIDProvider` it returns the unique
+id that is needed to exist as a `data-code-surfer` attribute on the slide `section` in order to
+isolate code navigation to the currently visible Code Surfer code panel. Returns `''` if it's
 used outside of a context provider.
 
 #### `useRevealJSInstance`
 
-A hook that if it's used inside the descendants of a `RevealJSInstanceProvider` it returns the unique 
-currently initialized `reveal.js` instance. Returns `null` if it's 
+A hook that if it's used inside the descendants of a `RevealJSInstanceProvider` it returns the unique
+currently initialized `reveal.js` instance. Returns `null` if it's
 used outside of a context provider or if the `reveal.js` instance has not completed initializing yet.
 
 ## Notes
