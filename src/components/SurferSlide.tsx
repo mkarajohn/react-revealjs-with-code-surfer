@@ -1,5 +1,5 @@
 import { HTMLProps } from 'react';
-import { useCodeSurferSlideID } from '../hooks/useCodeSurferSlideID';
+import { useCodeSurferSlideID } from '../hooks/useCodeSurferSlideID.js';
 
 export type SurferSlideProps = HTMLProps<HTMLElement>;
 

@@ -13,9 +13,9 @@ import {
 } from '@code-surfer/themes';
 import React, { useEffect } from 'react';
 import { useSpring } from 'use-spring';
-import { useCodeSurferSlideID } from '../hooks/useCodeSurferSlideID';
-import { useRevealJSInstance } from '../hooks/useRevealJSInstance';
-import type { InputStep } from './types';
+import { useCodeSurferSlideID } from '../hooks/useCodeSurferSlideID.js';
+import { useRevealJSInstance } from '../hooks/useRevealJSInstance.js';
+import type { InputStep } from './types.js';
 
 export type SurferCodeThemes =
   | 'base'

@@ -1,19 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "outDir": "dist",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "moduleResolution": "node",
+    "target": "ES2020",
+    "outDir": "./dist/esm",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "moduleResolution": "NodeNext",
     "sourceMap": true,
     "esModuleInterop": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "module": "ESNext",
+    "module": "NodeNext",
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "rootDir": "./src",
 
     /* Path resolutions */
     "paths": {

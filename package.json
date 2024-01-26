@@ -2,14 +2,22 @@
   "name": "react-revealjs-with-code-surfer",
   "version": "1.2.2",
   "description": "A collection of React components that make it easy to create presentation slides using code-surfer with reveal.js",
+  "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "exports": {
-    "types": "./dist/types/index.d.ts",
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js",
-    "default": "./dist/cjs/index.js"
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      },
+      "default": "./dist/cjs/index.js"
+    }
   },
   "files": [
     "dist"
@@ -19,10 +27,9 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npm run build:esm & npm run build:cjs & npm run build:types",
-    "build:esm": "rimraf ./dist/esm && tsc --module esnext --outDir dist/esm",
-    "build:cjs": "rimraf ./dist/cjs && tsc --module commonjs --outDir dist/cjs",
-    "build:types": "rimraf ./dist/types && tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir dist/types",
+    "build": "rimraf ./dist && npm run build:esm & npm run build:cjs && tsconfig-to-dual-package",
+    "build:esm": "rimraf ./dist/esm && tsc -p tsconfig.build.esm.json",
+    "build:cjs": "rimraf ./dist/cjs && tsc -p tsconfig.build.cjs.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -54,6 +61,7 @@
     "prettier": "^2.8.8",
     "prettier-plugin-organize-imports": "^3.2.2",
     "rimraf": "^5.0.1",
+    "tsconfig-to-dual-package": "^1.2.0",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {

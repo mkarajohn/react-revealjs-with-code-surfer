@@ -1,7 +1,7 @@
-export * from './components/SurferCode';
-export * from './components/SurferSlide';
-export * from './components/providers/RevealJSProvider';
-export * from './components/providers/SurferSlideIDProvider';
-export type * from './components/types';
-export { useCodeSurferSlideID } from './hooks/useCodeSurferSlideID';
-export { useRevealJSInstance } from './hooks/useRevealJSInstance';
+export * from './components/SurferCode.js';
+export * from './components/SurferSlide.js';
+export * from './components/providers/RevealJSProvider.js';
+export * from './components/providers/SurferSlideIDProvider.js';
+export type * from './components/types.js';
+export { useCodeSurferSlideID } from './hooks/useCodeSurferSlideID.js';
+export { useRevealJSInstance } from './hooks/useRevealJSInstance.js';

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import RevealJS from 'reveal.js';
 import 'reveal.js/dist/reveal.css';
 import RevealNotes from 'reveal.js/plugin/notes/notes';
-import { revealJSContext } from '../../contexts/revealjs-context';
+import { revealJSContext } from '../../contexts/revealjs-context.js';
 
 export type RevealJSProviderProps = {
   children: ReactNode;

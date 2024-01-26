@@ -1,6 +1,6 @@
 import React, { useState, type ReactNode } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { codeSurferSlideContext } from '../../contexts/code-surfer-slide-context';
+import { codeSurferSlideContext } from '../../contexts/code-surfer-slide-context.js';
 
 export type SurferSlideIDProviderProps = {
   children: ((x: string) => ReactNode) | ReactNode | (((x: string) => ReactNode) | ReactNode)[];
