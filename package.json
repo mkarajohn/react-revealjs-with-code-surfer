@@ -1,6 +1,6 @@
 {
   "name": "react-revealjs-with-code-surfer",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A collection of React components that make it easy to create presentation slides using code-surfer with reveal.js",
   "type": "module",
   "main": "dist/cjs/index.js",
