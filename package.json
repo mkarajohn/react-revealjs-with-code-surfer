@@ -23,7 +23,7 @@
     "dist"
   ],
   "repository": {
-    "url": "https://github.com/mkarajohn/react-revealjs-with-code-surfer"
+    "url": "git+https://github.com/mkarajohn/react-revealjs-with-code-surfer.git"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
