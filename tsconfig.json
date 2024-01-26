@@ -5,6 +5,7 @@
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "moduleResolution": "NodeNext",
     "sourceMap": true,
+    "declaration": true,
     "esModuleInterop": true,
     "noEmit": false,
     "jsx": "react-jsx",
